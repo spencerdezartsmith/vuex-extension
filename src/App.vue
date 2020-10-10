@@ -1,20 +1,22 @@
 <template>
   <div id="app">
-    <h1>mapNestedState Example</h1>
-    <p>Farmer: {{ farmer }}</p>
-    <p>Address: {{ address }}</p>
-    <stock-table
-      title="Pigs"
-      :items="pigs"
-      :headers="[ 'Name', 'Color', 'Weight', 'Sex' ]"/>
-    <stock-table
-      title="Cows"
-      :items="cows"
-      :headers="[ 'Name', 'Color', 'Breed', 'Sex' ]"/>
-    <stock-table
-      title="Calves"
-      :items="calves"
-      :headers="[ 'Name', 'DOB', 'Color', 'Sex' ]"/>
+    <div class="container">
+      <h1>mapNestedState Example</h1>
+      <p>Farmer: {{ farmer }}</p>
+      <p>Address: {{ address }}</p>
+      <stock-table
+        title="Pigs"
+        :items="pigs"
+        :headers="[ 'Name', 'Color', 'Weight', 'Sex' ]"/>
+      <stock-table
+        title="Cows"
+        :items="cows"
+        :headers="[ 'Name', 'Color', 'Breed', 'Sex' ]"/>
+      <stock-table
+        title="Calves"
+        :items="calves"
+        :headers="[ 'Name', 'DOB', 'Color', 'Sex' ]"/>
+    </div>
   </div>
 </template>
 
@@ -52,14 +54,18 @@ export default {
 };
 </script>
 
-<style>
+<style lang="css" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px 0 60px;
+}
+.container {
+  margin: 0 auto;
+  width: 800px;
 }
 ul {
   list-style: none;
